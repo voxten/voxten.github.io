@@ -1,0 +1,124 @@
+@font-face
+{
+  font-family: witcherFont;
+  src: url(../fonts/Thewitcher-jnOj.ttf);
+}
+
+body
+{
+  font-size: 10px;
+  margin: 0;
+}
+
+main
+{
+  background-image: url("../grafiki/tlo2.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%, 50%, 0px, 0px;
+  background-size: cover;
+  color: black;
+  margin: 0px;
+  text-align: left;
+  line-height: 1.25;
+  height: 550px;
+  font-size: 15px;
+}
+
+#menu
+{
+  background-image: url("../grafiki/tlo2.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%, 50%, 0px, 0px;
+  background-size: cover;
+  color: black;
+  margin: 0px;
+  text-align: left;
+  line-height: 1.25;
+  height: 750px;
+  font-size: 15px;
+}
+
+nav
+{
+  overflow: hidden;
+  position: fixed;
+  background-color: orange;
+  height: 70px;
+  font-size: 16px;
+  width: 100%;
+}
+
+nav a 
+{
+  text-decoration: none;
+  color: white;
+}
+
+footer
+{
+  background-color: black;
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 20px;
+  height: 170px;
+  width: 100%;
+}
+
+.container 
+{
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
+  height: 100%;
+  background-color: green;
+}
+
+.test2
+{
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+  height: 100%;
+  background-color: red;
+}
+
+#navigation
+{
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px;
+  padding-top: 20px;
+}
+
+#handler
+{
+  margin-left: 600px;
+}
+
+#navPlaceholder
+{
+  width: 100%;
+  height: 70px;
+}
+
+.navButton
+{
+  background-image: url(../grafiki/przycisk.jpg);
+  background-position: left;
+  border-radius: 5px;
+  height: 20px;
+  width: 120px;
+  display: inline-block;
+  border: 1px solid white;
+  padding: 5px;
+  margin-left: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.navButton:hover
+{
+  background-position: right;
+}
