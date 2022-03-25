@@ -189,6 +189,7 @@ footer
   text-align: center;
   font-weight: bold;
   font-size: 20px;
+  transition: border-color 300ms ease, background-color 300ms ease;
 }
 
 #aboutButton:hover
