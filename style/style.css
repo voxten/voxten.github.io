@@ -1,22 +1,14 @@
-@font-face
-{
-  font-family: witcherFont;
-  src: url(../fonts/Thewitcher-jnOj.ttf);
-}
-
 body
 {
   font-size: 10px;
   margin: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: white;
 }
 
 main
 {
-  background-image: url("../grafiki/tlo2.jpg");
-  background-repeat: no-repeat;
-  background-position: 50%, 50%, 0px, 0px;
-  background-size: cover;
-  color: black;
+  background-color: white;
   margin: 0px;
   text-align: left;
   line-height: 1.25;
@@ -24,13 +16,21 @@ main
   font-size: 15px;
 }
 
-#menu
+#firstBlock
 {
-  background-image: url("../grafiki/tlo2.jpg");
+  height: 550px;
+  text-align: left;
+  line-height: 1.25;
+  font-size: 15px;
+  background-image: url("../img/tlo2.jpg");
   background-repeat: no-repeat;
   background-position: 50%, 50%, 0px, 0px;
   background-size: cover;
-  color: black;
+}
+
+#secondBlock
+{
+  background-color: white;
   margin: 0px;
   text-align: left;
   line-height: 1.25;
@@ -66,22 +66,59 @@ footer
   width: 100%;
 }
 
-.container 
+.skillsBlock
 {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1200px;
+  float: left;
+  font-size: 18px;
+  width: 400px;
   height: 100%;
-  background-color: green;
+  text-align: center;
+  color: black;
+  background-color: white;
 }
 
-.test2
+.skillsBlock p 
 {
+  font-weight: bold;
+}
+
+.skillsSquare
+{
+  width: 250px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+.skillsSquare p img 
+{
+  width: 30px;
+  height: 30px;
+}
+
+.imgWrapper img
+{
+  height: 30px;
+}
+
+.textWrapper img
+{
+  padding-bottom: 6px; 
+  padding-top: 6px;
+}
+
+.container 
+{
+  max-width: 1200px;
+  height: 100%;
   margin-right: auto;
   margin-left: auto;
-  width: 1200px;
-  height: 100%;
-  background-color: red;
+}
+
+.boldStyle
+{
+  font-weight: bold;
 }
 
 #navigation
@@ -105,7 +142,7 @@ footer
 
 .navButton
 {
-  background-image: url(../grafiki/przycisk.jpg);
+  background-image: url(../img/przycisk.jpg);
   background-position: left;
   border-radius: 5px;
   height: 20px;
@@ -114,7 +151,6 @@ footer
   border: 1px solid white;
   padding: 5px;
   margin-left: 10px;
-  font-weight: bold;
   text-align: center;
 }
 
