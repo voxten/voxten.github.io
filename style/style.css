@@ -70,7 +70,7 @@ footer
 {
   float: left;
   font-size: 18px;
-  width: 400px;
+  width: 33.3334%;
   height: 100%;
   text-align: center;
   color: black;
@@ -85,7 +85,7 @@ footer
 .skillsSquare
 {
   width: 250px;
-  height: 250px;
+  min-height: 250px;
   margin-left: auto;
   margin-right: auto;
   padding: 15px;
@@ -114,6 +114,24 @@ footer
   height: 100%;
   margin-right: auto;
   margin-left: auto;
+}
+
+#aboutMe
+{
+  padding-top: 100px;
+  text-align: center;
+}
+
+#aboutMeHeading
+{
+  font-size: 62px;
+ 
+}
+
+#aboutMeP
+{
+  font-size: 28px;
+  margin-top: 0;
 }
 
 .boldStyle
@@ -157,4 +175,24 @@ footer
 .navButton:hover
 {
   background-position: right;
+}
+
+#aboutButton
+{
+  border-radius: 5px;
+  width: 120px;
+  display: inline-block;
+  border: 2px solid white;
+  padding: 8px 25px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#aboutButton:hover
+{
+  background-color: white;
+  color: black;
 }
