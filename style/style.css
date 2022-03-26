@@ -22,9 +22,10 @@ main
   text-align: left;
   line-height: 1.25;
   font-size: 15px;
-  background-image: url("../img/tlo2.jpg");
+  background-image: url("../img/Background.jpg");
   background-repeat: no-repeat;
-  background-position: 50%, 50%, 0px, 0px;
+  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
 }
 
