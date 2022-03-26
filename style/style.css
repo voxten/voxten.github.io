@@ -35,7 +35,7 @@ main
   margin: 0px;
   text-align: left;
   line-height: 1.25;
-  height: 750px;
+  height: 800px;
   font-size: 15px;
 }
 
@@ -72,7 +72,7 @@ footer
   float: left;
   font-size: 18px;
   width: 33.3334%;
-  height: 100%;
+  height: 90%;
   text-align: center;
   color: black;
   background-color: white;
@@ -107,6 +107,23 @@ footer
 {
   padding-bottom: 6px; 
   padding-top: 6px;
+}
+
+#github
+{
+  width: 50px; 
+  height: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#github img 
+{
+  width:50px;   
+
 }
 
 .container 
