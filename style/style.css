@@ -16,7 +16,7 @@ main
   font-size: 15px;
 }
 
-#firstBlock
+.backgroundPageBlock
 {
   height: 550px;
   text-align: left;
@@ -25,7 +25,7 @@ main
   background-image: url("../img/Background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-position: left;
   background-size: cover;
 }
 
@@ -85,7 +85,7 @@ footer
 
 .skillsSquare
 {
-  width: 250px;
+
   min-height: 250px;
   margin-left: auto;
   margin-right: auto;
@@ -117,19 +117,19 @@ footer
   margin-left: auto;
 }
 
-#aboutMe
+.backgroundPage
 {
   padding-top: 100px;
   text-align: center;
 }
 
-#aboutMeHeading
+.backgroundPageHeading
 {
   font-size: 62px;
  
 }
 
-#aboutMeP
+.backgroundPageP
 {
   font-size: 28px;
   margin-top: 0;
@@ -177,7 +177,7 @@ footer
   background-color: black;
 }
 
-#aboutButton
+.backgroundPageButton
 {
   border-radius: 5px;
   width: 120px;
@@ -192,7 +192,7 @@ footer
   transition: border-color 300ms ease, background-color 300ms ease;
 }
 
-#aboutButton:hover
+.backgroundPageButton:hover
 {
   background-color: white;
   color: black;
