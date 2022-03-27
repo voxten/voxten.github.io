@@ -214,3 +214,21 @@ footer
   background-color: white;
   color: black;
 }
+
+@media only screen and (max-width: 700px)
+{
+  #secondBlock
+  {
+    height: 1025px;
+  }
+
+  .backgroundPageBlock
+  {
+    line-height: 1;
+  }
+
+  #handler
+  {
+    margin-left: 0px;
+  }
+}
