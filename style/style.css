@@ -22,7 +22,7 @@ main
   text-align: left;
   line-height: 1.25;
   font-size: 15px;
-  background-image: url("../img/Background.jpg");
+  background-image: url("../img/cityskyline.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left;
@@ -31,7 +31,9 @@ main
 
 #secondBlock
 {
-  background-color: white;
+  background-image: url("../img/Background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0px;
   text-align: left;
   line-height: 1.25;
@@ -39,11 +41,37 @@ main
   font-size: 15px;
 }
 
+.test
+{
+  height: 550px;
+  text-align: left;
+  line-height: 1.25;
+  font-size: 15px;
+  background-image: url("../img/et.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left;
+  background-size: cover;  
+}
+.test2
+{
+  height: 550px;
+  text-align: left;
+  line-height: 1.25;
+  font-size: 15px;
+  background-image: url("../img/etet.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left;
+  background-size: cover;  
+}
+
 nav
 {
   overflow: hidden;
   position: fixed;
-  background-color: orange;
+  background-image: url("../img/et.png");
+  background-size: cover;
   height: 70px;
   font-size: 16px;
   width: 100%;
@@ -57,7 +85,7 @@ nav a
 
 footer
 {
-  background-color: black;
+  background-image: url("../img/cityskyline.png");
   font-weight: bold;
   color: white;
   font-size: 15px;
@@ -111,24 +139,29 @@ footer
 
 #git
 {
-  width: 110px; 
+  padding-top: 10px;
+  margin: 0 auto 0 auto;
+  width: 105px;
+}
+
+#gitContainer
+{
   height: 50px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
+  background-color: white;
 }
 
 .git-icons
 {
-   width: 50px;
-   height: 50px;
-   display: inline-block;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
 }
 
 #git img 
 {
   width:50px;   
-
 }
 
 .container 
@@ -137,6 +170,15 @@ footer
   height: 100%;
   margin-right: auto;
   margin-left: auto;
+}
+
+#skillsContainer 
+{
+  max-width: 1200px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 15px;
 }
 
 .backgroundPage
@@ -148,7 +190,6 @@ footer
 .backgroundPageHeading
 {
   font-size: 62px;
- 
 }
 
 .backgroundPageP
@@ -166,13 +207,14 @@ footer
 {
   margin-right: auto;
   margin-left: auto;
-  width: 1200px;
   padding-top: 20px;
 }
 
 #handler
 {
-  margin-left: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 550px;
 }
 
 #navPlaceholder
@@ -220,7 +262,7 @@ footer
   color: black;
 }
 
-@media only screen and (max-width: 700px)
+@media only screen and (max-width: 800px)
 {
   #secondBlock
   {
@@ -232,8 +274,5 @@ footer
     line-height: 1;
   }
 
-  #handler
-  {
-    margin-left: 0px;
-  }
+
 }
