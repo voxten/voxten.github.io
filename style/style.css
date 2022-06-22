@@ -22,16 +22,16 @@ main
   text-align: left;
   line-height: 1.25;
   font-size: 15px;
-  background-image: url("../img/cityskyline.png");
+  background-image: url("../img/Backgrounds/cityskyline.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left;
   background-size: cover;
 }
 
-#secondBlock
+#mainSkillsBlock
 {
-  background-image: url("../img/Background2.jpg");
+  background-image: url("../img/Backgrounds/background_purple.png");
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0px;
@@ -41,25 +41,26 @@ main
   font-size: 15px;
 }
 
-.test
+.webPageBlock
 {
   height: 550px;
   text-align: left;
   line-height: 1.25;
   font-size: 15px;
-  background-image: url("../img/et.png");
+  background-image: url("../img/Backgrounds/background_big.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left;
   background-size: cover;  
 }
-.test2
+
+.graphicsPageBlock
 {
   height: 550px;
   text-align: left;
   line-height: 1.25;
   font-size: 15px;
-  background-image: url("../img/etet.png");
+  background-image: url("../img/Backgrounds/background_purple.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left;
@@ -70,7 +71,7 @@ nav
 {
   overflow: hidden;
   position: fixed;
-  background-image: url("../img/et.png");
+  background-image: url("../img/Backgrounds/background_big.png");
   background-size: cover;
   height: 70px;
   font-size: 16px;
@@ -85,7 +86,7 @@ nav a
 
 footer
 {
-  background-image: url("../img/cityskyline.png");
+  background-image: url("../img/Backgrounds/cityskyline.png");
   font-weight: bold;
   color: white;
   font-size: 15px;
@@ -103,7 +104,7 @@ footer
   height: 90%;
   text-align: center;
   color: black;
-  background-color: white;
+  background-color: rgba(240, 240, 240, 0.7);
 }
 
 .skillsBlock p 
@@ -149,7 +150,7 @@ footer
   height: 50px;
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
+  background-color: rgba(240, 240, 240, 0.7);
 }
 
 .git-icons
@@ -273,6 +274,4 @@ footer
   {
     line-height: 1;
   }
-
-
 }
