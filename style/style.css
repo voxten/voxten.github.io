@@ -16,7 +16,20 @@ main
   font-size: 15px;
 }
 
-.backgroundPageBlock
+.violetSmallPageBlock
+{
+  height: 550px;
+  text-align: left;
+  line-height: 1.25;
+  font-size: 15px;
+  background-image: url("../img/Backgrounds/background_big.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left;
+  background-size: cover;
+}
+
+.blueSmallPageBlock
 {
   height: 550px;
   text-align: left;
@@ -26,12 +39,12 @@ main
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left;
-  background-size: cover;
+  background-size: cover;  
 }
 
-#mainSkillsBlock
+#skillsBlockPage
 {
-  background-image: url("../img/Backgrounds/background_purple.png");
+  background-image: url("../img/Backgrounds/cityskyline.png");
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0px;
@@ -47,7 +60,7 @@ main
   text-align: left;
   line-height: 1.25;
   font-size: 15px;
-  background-image: url("../img/Backgrounds/background_big.png");
+  background-image: url("../img/Backgrounds/cityskyline.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left;
@@ -71,7 +84,7 @@ nav
 {
   overflow: hidden;
   position: fixed;
-  background-image: url("../img/Backgrounds/background_big.png");
+  background-image: url("../img/Backgrounds/cityskyline.png");
   background-size: cover;
   height: 70px;
   font-size: 16px;
@@ -140,16 +153,13 @@ footer
 
 #git
 {
-  padding-top: 10px;
+  padding-top: 5px;
   margin: 0 auto 0 auto;
   width: 105px;
 }
 
 #gitContainer
 {
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
   background-color: rgba(240, 240, 240, 0.7);
 }
 
@@ -179,7 +189,7 @@ footer
   height: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .backgroundPage
@@ -230,16 +240,18 @@ footer
   height: 20px;
   width: 120px;
   display: inline-block;
-  border: 1px solid orange;
+  border: 1px solid white;
   margin-left: 10px;
   padding: 5px 0px 5px 0px;
   text-align: center;
+  font-weight: bold;
   transition: border-color 300ms ease, background-color 300ms ease;
 }
 
 .navButton:hover
 {
-  background-color: black;
+  background-color: white;
+  color: black;
 }
 
 .backgroundPageButton
