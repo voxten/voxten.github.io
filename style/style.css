@@ -22,7 +22,7 @@ main
   text-align: left;
   line-height: 1.25;
   font-size: 15px;
-  background-image: url("../img/Backgrounds/background_big.png");
+  background-image: url("../img/Backgrounds/background_mounts.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left;
@@ -35,7 +35,7 @@ main
   text-align: left;
   line-height: 1.25;
   font-size: 15px;
-  background-image: url("../img/Backgrounds/cityskyline.png");
+  background-image: url("../img/Backgrounds/background_cityskyline.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left;
@@ -44,7 +44,7 @@ main
 
 #skillsBlockPage
 {
-  background-image: url("../img/Backgrounds/cityskyline.png");
+  background-image: url("../img/Backgrounds/background_cityskyline.png");
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0px;
@@ -60,7 +60,7 @@ main
   text-align: left;
   line-height: 1.25;
   font-size: 15px;
-  background-image: url("../img/Backgrounds/cityskyline.png");
+  background-image: url("../img/Backgrounds/background_cityskyline.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left;
@@ -84,7 +84,7 @@ nav
 {
   overflow: hidden;
   position: fixed;
-  background-image: url("../img/Backgrounds/cityskyline.png");
+  background-image: url("../img/Backgrounds/background_cityskyline.png");
   background-size: cover;
   height: 70px;
   font-size: 16px;
@@ -99,7 +99,7 @@ nav a
 
 footer
 {
-  background-image: url("../img/Backgrounds/cityskyline.png");
+  background-image: url("../img/Backgrounds/background_cityskyline.png");
   font-weight: bold;
   color: white;
   font-size: 15px;
@@ -151,14 +151,19 @@ footer
   padding-top: 6px;
 }
 
-#git
+#contactBar
 {
   padding-top: 5px;
   margin: 0 auto 0 auto;
-  width: 105px;
+  width: 160px;
 }
 
-#gitContainer
+#contactBar img 
+{
+  width:50px;   
+}
+
+#contactBarContainer
 {
   background-color: rgba(240, 240, 240, 0.7);
 }
@@ -168,11 +173,6 @@ footer
   width: 50px;
   height: 50px;
   display: inline-block;
-}
-
-#git img 
-{
-  width:50px;   
 }
 
 .container 
