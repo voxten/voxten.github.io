@@ -1,3 +1,15 @@
+.violet-big-page-block
+{
+  min-height: 1750px;
+  line-height: 1.25;
+  font-size: 15px;
+  background-image: url("../img/Backgrounds/background_mounts.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left;
+  background-size: cover;  
+}
+
 .projects-background-page-p
 {
   font-size: 28px;
@@ -9,50 +21,70 @@
   text-align: center;
 }
 
-.rectangle 
-{
-	width: 300px;
-	height: 350px;
-	background-size: contain;
-	overflow: hidden;
-	cursor: pointer;
-	display: inline-block;
-}
-
-.rectangle-controller
-{
-	width: 100%;
-	margin-right: auto;
-	margin-left: auto;
-}
-
 .rectangle-controller img
 {
 	width: 300px;
 	height: 350px;
 }
 
-.rectangle img
+.rectangle-left
 {
-	object-fit: cover;
-	transition: .2s linear
+	width: 100%;
+	height: 350px;
+	background-size: contain;
+	overflow: hidden;
+	cursor: pointer;
+	float: left;
 }
 
-.rectangle:hover img
+.rectangle-left img
+{
+	object-fit: cover;
+	transition: .2s linear;
+	float: left;
+}
+
+.rectangle-left img:hover 
 {
 	object-fit: cover;
 	width: 320px;
 }
 
-.violet-big-page-block
+.rectangle-right
 {
-  height: 750px;
-  text-align: left;
-  line-height: 1.25;
-  font-size: 15px;
-  background-image: url("../img/Backgrounds/background_mounts.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: left;
-  background-size: cover;  
+	width: 100%;
+	height: 350px;
+	background-size: contain;
+	overflow: hidden;
+	cursor: pointer;
+	float: right;
+}
+
+.rectangle-right img
+{
+	object-fit: cover;
+	transition: .2s linear;
+	float: right;
+}
+
+.rectangle-right img:hover 
+{
+	object-fit: cover;
+	width: 320px;
+}
+
+#description
+{
+	max-height: 350px;
+}
+
+#description p
+{
+	text-align: center;
+	height: 100px;
+	font-size: 28px;
+	margin: 0;
+	padding-top: 125px;
+	padding-bottom: 125px;
+	padding-left: 300px;
 }
