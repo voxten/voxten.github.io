@@ -22,7 +22,7 @@ main
   text-align: left;
   line-height: 1.25;
   font-size: 15px;
-  background-image: url("../img/Backgrounds/background_mounts.png");
+  background-image: url("../img/backgrounds/background_mounts.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left;
@@ -35,7 +35,7 @@ main
   text-align: left;
   line-height: 1.25;
   font-size: 15px;
-  background-image: url("../img/Backgrounds/background_cityskyline.png");
+  background-image: url("../img/backgrounds/background_cityskyline.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left;
@@ -44,7 +44,7 @@ main
 
 #skills-block-page
 {
-  background-image: url("../img/Backgrounds/background_cityskyline.png");
+  background-image: url("../img/backgrounds/background_cityskyline.png");
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0px;
@@ -60,7 +60,7 @@ main
   text-align: left;
   line-height: 1.25;
   font-size: 15px;
-  background-image: url("../img/Backgrounds/background_cityskyline.png");
+  background-image: url("../img/backgrounds/background_cityskyline.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left;
@@ -73,7 +73,7 @@ main
   text-align: left;
   line-height: 1.25;
   font-size: 15px;
-  background-image: url("../img/Backgrounds/background_purple.png");
+  background-image: url("../img/backgrounds/background_purple.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: left;
@@ -84,7 +84,7 @@ nav
 {
   overflow: auto;
   position: fixed;
-  background-image: url("../img/Backgrounds/background_cityskyline.png");
+  background-image: url("../img/backgrounds/background_cityskyline.png");
   background-size: cover;
   height: 70px;
   font-size: 16px;
@@ -99,7 +99,7 @@ nav a
 
 footer
 {
-  background-image: url("../img/Backgrounds/background_cityskyline.png");
+  background-image: url("../img/backgrounds/background_cityskyline.png");
   font-weight: bold;
   color: white;
   font-size: 15px;
@@ -176,7 +176,7 @@ footer
 
 .container 
 {
-  max-width: 1200px;
+  max-width: 1400px;
   height: 100%;
   margin-right: auto;
   margin-left: auto;
