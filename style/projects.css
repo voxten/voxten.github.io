@@ -1,0 +1,58 @@
+.projects-background-page-p
+{
+  font-size: 28px;
+}
+
+.projects-background-page
+{
+  padding-top: 50px;
+  text-align: center;
+}
+
+.rectangle 
+{
+	width: 300px;
+	height: 350px;
+	background-size: contain;
+	overflow: hidden;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.rectangle-controller
+{
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.rectangle-controller img
+{
+	width: 300px;
+	height: 350px;
+}
+
+.rectangle img
+{
+	object-fit: cover;
+	transition: .2s linear
+}
+
+.rectangle:hover img
+{
+	object-fit: cover;
+	width: 320px;
+}
+
+.violet-big-page-block
+{
+  height: 750px;
+  text-align: left;
+  line-height: 1.25;
+  font-size: 15px;
+  background-image: url("../img/Backgrounds/background_mounts.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left;
+  background-size: cover;  
+}
