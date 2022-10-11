@@ -42,7 +42,7 @@ main
   background-size: cover;  
 }
 
-#skillsBlockPage
+#skills-block-page
 {
   background-image: url("../img/Backgrounds/background_cityskyline.png");
   background-repeat: no-repeat;
@@ -82,7 +82,7 @@ main
 
 nav
 {
-  overflow: hidden;
+  overflow: auto;
   position: fixed;
   background-image: url("../img/Backgrounds/background_cityskyline.png");
   background-size: cover;
@@ -109,7 +109,7 @@ footer
   width: 100%;
 }
 
-.skillsBlock
+.skills-block
 {
   float: left;
   font-size: 18px;
@@ -120,50 +120,49 @@ footer
   background-color: rgba(240, 240, 240, 0.5);
 }
 
-.skillsBlock p 
+.skills-block p 
 {
   font-weight: bold;
 }
 
-.skillsSquare
+.skills-square
 {
-
   min-height: 250px;
   margin-left: auto;
   margin-right: auto;
   padding: 15px;
 }
 
-.skillsSquare p img 
+.skills-square p img 
 {
   width: 30px;
   height: 30px;
 }
 
-.imgWrapper img
+.img-wrapper img
 {
   height: 30px;
 }
 
-.textWrapper img
+.text-wrapper img
 {
   padding-bottom: 6px; 
   padding-top: 6px;
 }
 
-#contactBar
+#contact-bar
 {
   padding-top: 5px;
   margin: 0 auto 0 auto;
   width: 160px;
 }
 
-#contactBar img 
+#contact-bar img 
 {
   width:50px;   
 }
 
-#contactBarContainer
+#contact-bar-container
 {
   background-color: rgba(240, 240, 240, 0.5);
 }
@@ -183,7 +182,7 @@ footer
   margin-left: auto;
 }
 
-#skillsContainer 
+#skills-container 
 {
   max-width: 1200px;
   height: 100%;
@@ -192,18 +191,18 @@ footer
   padding-top: 10px;
 }
 
-.backgroundPage
+.background-page
 {
   padding-top: 100px;
   text-align: center;
 }
 
-.backgroundPageHeading
+.background-page-header
 {
   font-size: 62px;
 }
 
-.backgroundPageP
+.background-page-p
 {
   font-size: 28px;
   margin-top: 0;
@@ -228,13 +227,13 @@ footer
   width: 550px;
 }
 
-#navPlaceholder
+#nav-placeholder
 {
   width: 100%;
   height: 70px;
 }
 
-.navButton
+.nav-button
 {
   border-radius: 5px;
   height: 20px;
@@ -248,13 +247,13 @@ footer
   transition: border-color 300ms ease, background-color 300ms ease;
 }
 
-.navButton:hover
+.nav-button:hover
 {
   background-color: white;
   color: black;
 }
 
-.backgroundPageButton
+.background-page-button
 {
   border-radius: 5px;
   width: 120px;
@@ -269,7 +268,7 @@ footer
   transition: border-color 300ms ease, background-color 300ms ease;
 }
 
-.backgroundPageButton:hover
+.background-page-button:hover
 {
   background-color: white;
   color: black;
@@ -282,7 +281,7 @@ footer
     height: 1025px;
   }
 
-  .backgroundPageBlock
+  .background-page-block
   {
     line-height: 1;
   }
