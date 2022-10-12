@@ -16,9 +16,9 @@ main
   font-size: 15px;
 }
 
-.violetSmallPageBlock
+.violet-small-page-block
 {
-  height: 550px;
+  min-height: 550px;
   text-align: left;
   line-height: 1.25;
   font-size: 15px;
@@ -137,6 +137,13 @@ footer
 {
   width: 30px;
   height: 30px;
+  object-fit: cover;
+	transition: .2s linear;
+}
+
+.skills-square p img:hover 
+{
+	width: 35px;
 }
 
 .img-wrapper img
