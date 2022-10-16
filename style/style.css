@@ -44,14 +44,15 @@ main
 
 #skills-block-page
 {
-  background-image: url("../img/backgrounds/background_cityskyline.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 800px;
   margin: 0px;
   text-align: left;
   line-height: 1.25;
-  height: 800px;
   font-size: 15px;
+  background-image: url("../img/backgrounds/background_cityskyline.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .webPageBlock
@@ -204,7 +205,7 @@ footer
   height: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 10px;
+  padding-top: 13px;
 }
 
 .background-page
