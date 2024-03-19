@@ -5,11 +5,13 @@ import {
     react,
     npm,
     mysql,
+    java,
     wordpress,
     unity,
     unreal,
     csharp,
     cpp,
+    stablediffusion,
     gimp,
     photoshop,
     git,
@@ -27,7 +29,7 @@ export const navLinks = [
     },
     {
         id: "skills",
-        title: "Skills",  
+        title: "Skills",
     },
     {
         id: "projects",
@@ -36,6 +38,10 @@ export const navLinks = [
     {
         id: "contact",
         title: "Contact",
+    },
+    {
+        id: "list",
+        title: "List",
     },
 ];
 
@@ -53,8 +59,8 @@ const services = [
         icon: mysql,
     },
     {
-        title: "Graphic Designer",
-        icon: gimp,
+        title: "Stable Diffusion Artist",
+        icon: stablediffusion,
     },
 ];
 
@@ -68,6 +74,11 @@ const skills = [
         name: "C#",
         percentage: 90,
         icon: csharp,
+    },
+    {
+        name: "JAVA",
+        percentage: 85,
+        icon: java,
     },
     {
         name: "GIT",
@@ -138,15 +149,15 @@ const groupProjects = [
         tags: [{
             name: "Group Project",
             color: "blue-text-gradient",
-        }, 
-        {
-            name: "Finished",
-            color: "green-text-gradient",
-        },        
-        {
-            name: "2D",
-            color: "orange-text-gradient",
-        }],
+        },
+            {
+                name: "Finished",
+                color: "green-text-gradient",
+            },
+            {
+                name: "2D",
+                color: "orange-text-gradient",
+            }],
         image: puzzledTime,
         source_code_link: "https://gitlab.com/dmarcinowski/puzzled-time",
         download_link: "https://mega.nz/file/ZE82lAQB#L0C1t8M410LLlWJh6oOIA_cW3hQ3JYqj3VmxJCi1IvE",
@@ -159,14 +170,14 @@ const groupProjects = [
             name: "Group Project",
             color: "blue-text-gradient",
         },
-        {
-            name: "Finished",
-            color: "green-text-gradient",
-        },        
-        {
-            name: "3D",
-            color: "orange-text-gradient",
-        }],
+            {
+                name: "Finished",
+                color: "green-text-gradient",
+            },
+            {
+                name: "3D",
+                color: "orange-text-gradient",
+            }],
         image: fastBreak,
         source_code_link: "https://github.com/voxten/GameJam",
         download_link: "https://github.com/voxten/",
@@ -179,14 +190,14 @@ const groupProjects = [
             name: "Group Project",
             color: "blue-text-gradient",
         },
-        {
-            name: "Unfinished",
-            color: "pink-text-gradient",
-        },        
-        {
-            name: "2D",
-            color: "orange-text-gradient",
-        }],
+            {
+                name: "Unfinished",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "2D",
+                color: "orange-text-gradient",
+            }],
         image: git,
         source_code_link: "https://github.com/Example-Text-Studio/Lihter",
         download_link: "https://github.com/voxten/",
@@ -195,12 +206,12 @@ const groupProjects = [
 ];
 
 const soloProjects = [{
-        name: "Blacksmith Clicker",
-        description: "More info soon",
-        tags: [{
-            name: "Solo Project",
-            color: "blue-text-gradient",
-        },
+    name: "Blacksmith Clicker",
+    description: "More info soon",
+    tags: [{
+        name: "Solo Project",
+        color: "blue-text-gradient",
+    },
         {
             name: "Finished",
             color: "green-text-gradient",
@@ -209,11 +220,11 @@ const soloProjects = [{
             name: "2D",
             color: "orange-text-gradient",
         }],
-        image: blacksmithClicker,
-        source_code_link: "https://github.com/voxten/Blacksmith-Clicker",
-        download_link: "https://mega.nz/file/ZdlEFbxL#jk05eYrwRJNxgdae75w5WrjYkjW757BPfTCzUnVQMVI",
-        downloadable: true,
-    },
+    image: blacksmithClicker,
+    source_code_link: "https://github.com/voxten/Blacksmith-Clicker",
+    download_link: "https://mega.nz/file/ZdlEFbxL#jk05eYrwRJNxgdae75w5WrjYkjW757BPfTCzUnVQMVI",
+    downloadable: true,
+},
     {
         name: "Never Room",
         description: "My first big project, making this game since 2019",
@@ -221,14 +232,14 @@ const soloProjects = [{
             name: "Solo Project",
             color: "blue-text-gradient",
         },
-        {
-            name: "Unfinished",
-            color: "pink-text-gradient",
-        },
-        {
-            name: "3D",
-            color: "orange-text-gradient",
-        }],
+            {
+                name: "Unfinished",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "3D",
+                color: "orange-text-gradient",
+            }],
         image: git,
         source_code_link: "https://github.com/voxten/",
         download_link: "https://github.com/voxten/",
@@ -241,14 +252,14 @@ const soloProjects = [{
             name: "Solo Project",
             color: "blue-text-gradient",
         },
-        {
-            name: "Unfinished",
-            color: "pink-text-gradient",
-        },
-        {
-            name: "3D",
-            color: "orange-text-gradient",
-        }],
+            {
+                name: "Unfinished",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "3D",
+                color: "orange-text-gradient",
+            }],
         image: fnaf,
         source_code_link: "https://github.com/voxten/FNAF-Game",
         download_link: "https://github.com/voxten/",
@@ -261,14 +272,14 @@ const soloProjects = [{
             name: "Solo Project",
             color: "blue-text-gradient",
         },
-        {
-            name: "Unfinished",
-            color: "pink-text-gradient",
-        },
-        {
-            name: "3D",
-            color: "orange-text-gradient",
-        }],
+            {
+                name: "Unfinished",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "3D",
+                color: "orange-text-gradient",
+            }],
         image: racing,
         source_code_link: "https://github.com/voxten/Racing-Game",
         download_link: "https://mega.nz/file/lEUAARLQ#CG8giPC-FxdlUS-vr6QTgJSSJ0xlHMAtXJerWnjSvNQ",

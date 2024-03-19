@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { About, Contact, Header, Navbar, Works, StarsCanvas } from "./components";
+import { About, Contact, Header, Navbar, Works, List, StarsCanvas } from "./components";
 import SkillsPanel from "./components/Skills.jsx";
 
 const App = () => {
@@ -15,14 +15,15 @@ const App = () => {
 				</div>
 				<About />
 				<div className="relative z-0">
-				<SkillsPanel />
+					<SkillsPanel />
 					<StarsCanvas />
 				</div>
-				<Works />	
+				<Works />
 				<div className="relative z-0">
 					<Contact />
 					<StarsCanvas />
 				</div>
+				<List />
 			</div>
 		</BrowserRouter>
 	);

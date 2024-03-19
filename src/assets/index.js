@@ -10,12 +10,15 @@ import javascript from "./img/icons/javascript.png"
 import react from "./img/icons/reactjs.png"
 import mysql from "./img/icons/mysql.png"
 import wordpress from "./img/icons/wordpress.png"
+import java from "./img/icons/java.png"
+import stablediffusion from "./img/icons/stablediffusion.png"
 
 import npm from "./img/icons/npm.png"
 
 import github from "./img/icons/github.png"
 import gitlab from "./img/icons/gitlab.png"
 import git from "./img/icons/git.png"
+import discord from "./img/icons/discord.png"
 
 import gimp from "./img/icons/gimp.png"
 import photoshop from "./img/icons/ps.png"
@@ -30,6 +33,7 @@ import fnaf from "./img/projects/fnaf.png"
 import racing from "./img/projects/racing.png"
 import fastBreak from "./img/projects/fast_break.png"
 import blacksmithClicker from "./img/projects/blacksmith_clicker.jpg"
+import warextinctia from "./img/projects/warextinctia.png"
 
 export {
     logo,
@@ -44,6 +48,8 @@ export {
     react,
     wordpress,
     npm,
+    java,
+    stablediffusion,
     unity,
     csharp,
     unreal,
@@ -52,9 +58,11 @@ export {
     github,
     gitlab,
     git,
+    discord,
     puzzledTime,
     fnaf,
     racing,
     fastBreak,
     blacksmithClicker,
+    warextinctia,
 };

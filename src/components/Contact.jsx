@@ -4,6 +4,9 @@ import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { SectionWrapper } from "../wrapper";
 import { slideIn } from "../utils/motion";
+import { github } from "../assets";
+import { gitlab } from "../assets";
+import { discord } from "../assets";
 
 const Contact = () => {
 	const formRef = useRef();
@@ -25,7 +28,7 @@ const Contact = () => {
 
 		emailjs
 			.send(
-				"service_35ci0tk",
+				"service_mzex6uj",
 				"template_gqmtyfa",
 				{
 					from_name: form.name,
@@ -62,7 +65,9 @@ const Contact = () => {
 				className="flex-[0.75] bg-black-100 rounded-2xl p-8">
 				<p className={styles.sectionSubText}>Get in touch</p>
 				<h3 className={styles.sectionHeadText}>Contact</h3>
-
+				<a href="https://github.com/voxten" target="blank_"><img alt="icon" src={github} style={{ width: '50px', height: '50px', display: 'inline-block', marginRight: '15px'}} /></a>
+				<a href="https://gitlab.com/voxten" target="blank_"><img alt="icon" src={gitlab} style={{ width: '50px', height: '50px', display: 'inline-block', marginRight: '15px'}} /></a>
+				<a href="https://discord.com/users/461303646198562817" target="blank_"><img alt="icon" src={discord} style={{ width: '50px', height: '50px', display: 'inline-block', marginRight: '15px'}} /></a>
 				<form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
 					<label className="flex flex-col">
 						<span className="text-white font-medium mb-4">Your Name</span>

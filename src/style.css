@@ -145,7 +145,8 @@
   }
 }
 
-.box{
+/*Skills Style*/
+.box {
   position: relative;
   width: 100%;
   --tw-bg-opacity: 1;
@@ -170,7 +171,7 @@
   margin: 25px 0;
 }
 
-.skill-box .title{
+.skill-box .title {
   display: block;
   font-size: 18px;
   font-weight: 600;
@@ -179,7 +180,7 @@
   color: #fff;
 }
 
-.skill-box .skill-bar{
+.skill-box .skill-bar {
   height: 8px;
   width: 100%;
   border-radius: 6px;
@@ -187,7 +188,7 @@
   background: rgba(0,0, 0, 0.1);
 }
 
-.skill-box .skill-per{
+.skill-box .skill-per {
   position: relative;
   display: block;
   height: 100%;
@@ -215,7 +216,7 @@
   }
 }
 
-.skill-per .tooltip{
+.skill-per .tooltip {
   position: absolute;
   right: -14px;
   top: -32px;
