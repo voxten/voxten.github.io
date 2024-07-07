@@ -19,7 +19,7 @@ module.exports = {
                 xs: "450px",
             },
             backgroundImage: {
-                "header-pattern": "url('/src/assets/img/backgrounds/astronaut.png')",
+                "header-pattern": "url('/src/assets/img/backgrounds/astronaut.webp')",
             },
             backgroundSize: {
               "bg-cover": "",  
