@@ -4,9 +4,7 @@ import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { SectionWrapper } from "../wrapper";
 import { slideIn } from "../utils/motion";
-import { github } from "../assets";
-import { gitlab } from "../assets";
-import { discord } from "../assets";
+import { github, gitlab, discord } from "../assets";
 
 const Contact = () => {
 	const formRef = useRef();

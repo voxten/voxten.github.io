@@ -1,7 +1,7 @@
 {
     "name": "portfolio",
     "private": true,
-    "version": "0.0.0",
+    "version": "3.0.0",
     "homepage": "https://voxten.github.io",
     "type": "module",
     "scripts": {
@@ -18,11 +18,13 @@
         "@react-three/drei": "^9.56.24",
         "@react-three/fiber": "^8.11.1",
         "firebase": "^10.9.0",
+        "firebase-admin": "^12.2.0",
         "framer-motion": "^9.0.7",
         "maath": "^0.5.2",
         "p5": "^1.6.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-firebase-hooks": "^5.1.1",
         "react-router-dom": "^6.8.1",
         "react-tilt": "^0.1.4",
         "react-vertical-timeline-component": "^3.6.0",
