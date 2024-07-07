@@ -1,14 +1,17 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, getDoc} from '@firebase/firestore';
+import { getStorage } from "firebase/storage"
+import { getFirestore } from '@firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB3pC1m3zOM7mG486GwkJZvfCYiIAvb4Ow",
-  authDomain: "graphics-card-list-project.firebaseapp.com",
-  projectId: "graphics-card-list-project",
-  storageBucket: "graphics-card-list-project.appspot.com",
-  messagingSenderId: "708045138420",
-  appId: "1:708045138420:web:54d5f615485a3c9ff9b1a1"
+  apiKey: "AIzaSyAwSEYmzmbnwAzGyUF4Iv9BU-sOhW_6bLY",
+  authDomain: "voxten-website.firebaseapp.com",
+  projectId: "voxten-website",
+  storageBucket: "voxten-website.appspot.com",
+  messagingSenderId: "709250687641",
+  appId: "1:709250687641:web:88865e23c78fb0a6584e08"
 };
 
 const app = initializeApp(firebaseConfig);
+
+export const storage = getStorage();
 export const firestore = getFirestore(app);
