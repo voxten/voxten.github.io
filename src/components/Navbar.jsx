@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { styles } from "../styles";
 import { navLinks } from "../constants";
+import { Link } from "react-router-dom";
 import { menu, close } from "../assets";
 
 const Navbar = () => {
@@ -9,7 +8,7 @@ const Navbar = () => {
 	const [toggle, setToggle] = useState(false);
 	return (
 		<nav
-			className={`${styles.paddingX} w-full flex py-5 items-center fixed top-0 z-20 bg-primary`}
+			className={`sm:px-16 px-6 w-full flex py-5 items-center fixed top-0 z-[100] bg-primary`}
 		>
 			<div
 				className="w-full flex justify-between items-center max-w-7xl mx-auto">
@@ -52,7 +51,7 @@ const Navbar = () => {
 					<div
 						className={`${
 							!toggle ? "hidden" : "flex"
-						} p-6 blue-background justify-center absolute top-20 right-0 min-w-[140px] z-10`} style={{
+						} p-6 blue-background justify-center absolute top-20 right-0 min-w-[140px] z-[100]`} style={{
 						width: '100%',marginTop: '-1rem'}}>
 						<ul className="list-none flex justify-end items-start flex-col gap-4">
 							{navLinks.map((link) => (

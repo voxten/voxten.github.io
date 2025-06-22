@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { styles } from '../styles';
 import { motion } from 'framer-motion';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../wrapper';
@@ -50,10 +49,10 @@ const About = () => {
     return (
         <>
             <motion.div variants={textVariant()}>
-                <p className={styles.sectionSubText}>
+                <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
                     Introduction
                 </p>
-                <h2 className={styles.sectionHeadText}>About Me</h2>
+                <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">About Me</h2>
             </motion.div>
             <motion.p
                 variants={fadeIn("", "", 0.1, 1)}

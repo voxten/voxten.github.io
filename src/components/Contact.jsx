@@ -1,7 +1,6 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { styles } from "../styles";
 import { SectionWrapper } from "../wrapper";
 import { slideIn } from "../utils/motion";
 import { github, gitlab, discord } from "../assets";
@@ -61,8 +60,8 @@ const Contact = () => {
 			<motion.div
 				variants={slideIn("left", "tween", 0.2, 1)}
 				className="flex-[0.75] bg-black-100 rounded-2xl p-8">
-				<p className={styles.sectionSubText}>Get in touch</p>
-				<h3 className={styles.sectionHeadText}>Contact</h3>
+				<p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">Get in touch</p>
+				<h3 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Contact</h3>
 				<a href="https://github.com/voxten" target="blank_"><img alt="icon" src={github} style={{ width: '50px', height: '50px', display: 'inline-block', marginRight: '15px'}} /></a>
 				<a href="https://gitlab.com/voxten" target="blank_"><img alt="icon" src={gitlab} style={{ width: '50px', height: '50px', display: 'inline-block', marginRight: '15px'}} /></a>
 				<a href="https://discord.com/users/461303646198562817" target="blank_"><img alt="icon" src={discord} style={{ width: '50px', height: '50px', display: 'inline-block', marginRight: '15px'}} /></a>

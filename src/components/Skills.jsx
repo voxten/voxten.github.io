@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../wrapper/index.js";
 import { fadeIn, slideIn, textVariant } from "../utils/motion.js";
-import { styles } from "../styles.js";
 import { firestore } from "../firebase";
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
 
@@ -57,10 +56,10 @@ const SkillsPanel = () => {
     return (
         <>
             <motion.div variants={textVariant()}>
-                <p className={styles.sectionSubText}>
+                <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
                     Skills
                 </p>
-                <h2 className={styles.sectionHeadText}>Skills</h2>
+                <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Skills</h2>
             </motion.div>
 
             <motion.p

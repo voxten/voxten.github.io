@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import { styles } from "../styles";
 import { SectionWrapper } from "../wrapper";
 import { fadeIn } from "../utils/motion";
 import React, { useRef, useState, useEffect } from "react";
 import { firestore, storage } from "../firebase";
-import {addDoc, collection, doc, getDocs, getDoc, deleteDoc, updateDoc, orderBy, query} from "@firebase/firestore"
+import {addDoc, collection, doc, getDocs, deleteDoc, updateDoc, orderBy, query} from "@firebase/firestore"
 import {ref, uploadBytes, getDownloadURL} from "firebase/storage";
 
 class Card {
@@ -323,8 +322,8 @@ const List = () => {
 			<motion.div
 				variants={fadeIn("up", "spring", 0.50)}
 				className="flex-[0.75] bg-black-100 rounded-2xl p-8">
-				<p className={styles.sectionSubText}>Manage Graphics Cards</p>
-				<h3 className={styles.sectionHeadText}>Graphics Cards List</h3>
+				<p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">Manage Graphics Cards</p>
+				<h3 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Graphics Cards List</h3>
 				<form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
 					<label className="flex flex-col">
 						<span className="text-white font-medium mb-4">Graphics Card Name</span>
@@ -390,7 +389,7 @@ const List = () => {
 			<motion.div
 				variants={fadeIn("up", "spring", 0.50)}
 				className="flex-[0.75] bg-black-100 rounded-2xl p-8 mt-4">
-				<p className={styles.sectionSubText}>Order Graphics Cards</p>
+				<p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">Order Graphics Cards</p>
 				<form ref={orderRef} onSubmit={handleOrderSubmit} className="mt-75 flex flex-col gap-8 flex-[0.5]">
 					<label className="flex flex-col">
 						<span className="text-white font-medium mb-0">Order by</span>
