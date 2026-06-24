@@ -3,7 +3,7 @@ import { firestore } from "../firebase";
 import { collection, addDoc, doc, setDoc } from "firebase/firestore";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
-import { SectionWrapper } from "../wrapper";
+import { SectionWrapper } from "../utils/wrapper";
 
 const CreateCollection = () => {
     const [newTag, setNewTag] = useState({

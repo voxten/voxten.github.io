@@ -1,29 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
-import { SectionWrapper } from "../wrapper/index.js";
-import { fadeIn, slideIn, textVariant } from "../utils/motion.js";
+import { SectionWrapper } from "../utils/wrapper/index.js";
+import { fadeIn, textVariant } from "../utils/motion.js";
 import { firestore } from "../firebase";
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
 
 const Skill = ({ icon, name, percentage, index }) => {
     return (
-        <div>
-            <span className="skill-box">
-                <span className="skill-holder">
-                    <img alt="icon" src={icon} style={{ width: '40px', height: '40px' }} />
-                    <h3 className="title">{name}</h3>
-                </span>
-                <div className="skill-bar">
-                    <motion.span
-                        className="skill-per"
+        <div className="w-full p-4 bg-gray-900/40 border border-white/5 backdrop-blur-xl rounded-2xl shadow-lg">
+            <div className="flex flex-col gap-3 w-full">
+                <div className="flex items-center gap-3">
+                    <div className="p-1 rounded-xl bg-black/20 border border-white/5">
+                        <img alt="icon" src={icon} className="w-10 h-10 object-contain" />
+                    </div>
+                    <h3 className="text-white font-bold text-base tracking-tight">{name}</h3>
+                </div>
+
+                <div className="h-2.5 w-full bg-black/40 rounded-full border border-white/5 relative overflow-visible mt-2">
+                    <motion.div
+                        className="h-full bg-gradient-to-r from-indigo-600 to-violet-600 rounded-full relative"
                         initial={{ width: 0 }}
                         animate={{ width: `${percentage}%` }}
-                        transition={{ duration: 1, delay: index * 0.1 }}
+                        transition={{ duration: 1, delay: index * 0.05 }}
                     >
-                        <span className="tooltip">{percentage}</span>
-                    </motion.span>
+                        <span className="absolute -top-7 right-0 translate-x-1/2 text-[10px] font-mono font-bold px-1.5 py-0.5 rounded-lg bg-indigo-600 text-white shadow-md shadow-indigo-600/20 after:content-[''] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:border-4 after:border-transparent after:border-t-indigo-600">
+                            {percentage}%
+                        </span>
+                    </motion.div>
                 </div>
-            </span>
+            </div>
         </div>
     );
 };
@@ -31,7 +36,7 @@ const Skill = ({ icon, name, percentage, index }) => {
 const SkillsPanel = () => {
     const [skills, setSkills] = useState([]);
     const [selectedCollection, setSelectedCollection] = useState('skillsGame');
-    const [animationKey, setAnimationKey] = useState(0); // key to reset animations
+    const [animationKey, setAnimationKey] = useState(0);
 
     useEffect(() => {
         const fetchSkills = async (collectionName) => {
@@ -40,7 +45,7 @@ const SkillsPanel = () => {
                 const skillsSnapshot = await getDocs(skillsQuery);
                 const skillsData = skillsSnapshot.docs.map(doc => doc.data());
                 setSkills(skillsData);
-                setAnimationKey(prevKey => prevKey + 1); // increment key to reset animations
+                setAnimationKey(prevKey => prevKey + 1);
             } catch (error) {
                 console.error("Error fetching skills: ", error);
             }
@@ -54,51 +59,79 @@ const SkillsPanel = () => {
     };
 
     return (
-        <>
-            <motion.div variants={textVariant()}>
-                <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
+        <div className="max-w-7xl mx-auto px-4">
+            <div className="absolute top-0 left-0 w-full h-full opacity-[0.02] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]" />
+            <motion.div
+                variants={textVariant()}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.25 }}
+                className="flex flex-col gap-1"
+            >
+                <span className="text-xs font-bold tracking-[0.2em] text-indigo-400 uppercase">
                     Skills
-                </p>
-                <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Skills</h2>
+                </span>
+                <h2 className="text-white font-extrabold md:text-[56px] sm:text-[46px] text-[36px] tracking-tight">
+                    Skills
+                </h2>
             </motion.div>
 
             <motion.p
                 variants={fadeIn("", "", 0.1, 1)}
-                className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.25 }}
+                className="mt-4 text-gray-400 text-[16px] md:text-[17px] max-w-3xl leading-[28px] border-l-2 border-indigo-500/30 pl-4 py-1"
             >
                 I specialize in creating immersive games using Unity, focusing on C# scripting and interactive gameplay mechanics. Additionally, I have expertise in web development, including HTML, CSS, JavaScript, and modern frameworks such as React. My skills enable me to deliver high-quality digital experiences, combining robust game design with dynamic web solutions.
             </motion.p>
 
-            <div className="flex justify-center" style={{ paddingTop: '20px' }}>
-                <button
-                    onClick={() => handleButtonClick('skillsGame')}
-                    className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-l-md ${selectedCollection === 'skillsGame' ? 'bg-blue-700' : ''}`}
-                >
-                    Game Development
-                </button>
-                <button
-                    onClick={() => handleButtonClick('skillsWeb')}
-                    className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 ${selectedCollection === 'skillsWeb' ? 'bg-blue-700' : ''}`}
-                >
-                    Web Development
-                </button>
-                <button
-                    onClick={() => handleButtonClick('skillsOther')}
-                    className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-md ${selectedCollection === 'skillsOther' ? 'bg-blue-700' : ''}`}
-                >
-                    Other
-                </button>
+            {/* Segmented Controls Controller */}
+            <div className="flex justify-center mt-12">
+                <div className="flex p-1 bg-black/40 rounded-xl border border-white/5 backdrop-blur-sm w-full sm:w-auto">
+                    <button
+                        onClick={() => handleButtonClick('skillsGame')}
+                        className={`flex-1 sm:flex-initial text-center py-1.5 px-4 text-xs font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
+                            selectedCollection === 'skillsGame'
+                                ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/20"
+                                : "text-gray-400 hover:text-gray-200"
+                        }`}
+                    >
+                        Game Development
+                    </button>
+                    <button
+                        onClick={() => handleButtonClick('skillsWeb')}
+                        className={`flex-1 sm:flex-initial text-center py-1.5 px-4 text-xs font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
+                            selectedCollection === 'skillsWeb'
+                                ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/20"
+                                : "text-gray-400 hover:text-gray-200"
+                        }`}
+                    >
+                        Web Development
+                    </button>
+                    <button
+                        onClick={() => handleButtonClick('skillsOther')}
+                        className={`flex-1 sm:flex-initial text-center py-1.5 px-4 text-xs font-medium rounded-lg transition-all duration-200 whitespace-nowrap ${
+                            selectedCollection === 'skillsOther'
+                                ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/20"
+                                : "text-gray-400 hover:text-gray-200"
+                        }`}
+                    >
+                        Other
+                    </button>
+                </div>
             </div>
 
-            <motion.div
-                variants={slideIn("left", "tween", 0.2, 1)}
-                className="box"
+            {/* Grid display layout */}
+            <div
+                className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4"
+                key={animationKey}
             >
                 {skills.map((skill, index) => (
                     <Skill key={`skills-${animationKey}-${index}`} icon={skill.icon} name={skill.name} percentage={skill.percentage} index={index} />
                 ))}
-            </motion.div>
-        </>
+            </div>
+        </div>
     );
 };
 

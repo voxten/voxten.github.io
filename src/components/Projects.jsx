@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { firestore } from "../firebase";
+import { firestore } from "../firebase.js";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
-import { SectionWrapper } from "../wrapper";
-import ProjectCard from "../components/projects/ProjectCard";
-import ProjectModal from "../components/projects/ProjectModal";
-import FilterBar from "../components/projects/FilterBar";
+import { fadeIn, textVariant } from "../utils/motion.js";
+import { SectionWrapper } from "../utils/wrapper/index.js";
+import ProjectCard from "./projects/ProjectCard.jsx";
+import FilterBar from "./projects/FilterBar.jsx";
 
 const Projects = ( {setSelectedProject} ) => {
     const [allProjects, setAllProjects] = useState([]);
@@ -52,12 +51,19 @@ const Projects = ( {setSelectedProject} ) => {
 
     return (
         <>
-            <motion.div variants={textVariant()}>
-                <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">My work</p>
-                <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Projects</h2>
+            <motion.div variants={textVariant()} className="flex flex-col gap-1">
+            <span className="text-xs font-bold tracking-[0.2em] text-indigo-400 uppercase">
+                My work
+            </span>
+                <h2 className="text-white font-extrabold md:text-[56px] sm:text-[46px] text-[36px] tracking-tight">
+                    Projects
+                </h2>
             </motion.div>
 
-            <motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
+            <motion.p
+                variants={fadeIn("", "", 0.1, 1)}
+                className="mt-4 text-gray-400 text-[16px] md:text-[17px] max-w-3xl leading-[28px] border-l-2 border-indigo-500/30 pl-4 py-1"
+            >
                 Projects showcasing my skills through real-world examples.
             </motion.p>
 
@@ -69,7 +75,6 @@ const Projects = ( {setSelectedProject} ) => {
                 setExcludeMode={setExcludeMode}
             />
 
-            {/* Changed justify-center to justify-start */}
             <div className="mt-16 flex flex-wrap gap-7 justify-start">
                 {filteredProjects.map((project, i) => (
                     <ProjectCard
