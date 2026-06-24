@@ -57,7 +57,6 @@ const Contact = () => {
 
 	return (
 		<div className="max-w-7xl mx-auto px-4 w-full">
-			<div className="absolute top-0 left-0 w-full h-full opacity-[0.02] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]" />
 			<motion.div
 				variants={textVariant()}
 				initial="hidden"
