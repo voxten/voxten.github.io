@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { SectionWrapper } from "../wrapper";
+import { SectionWrapper } from "../utils/wrapper";
 import { fadeIn } from "../utils/motion";
 import React, { useRef, useState, useEffect } from "react";
 import { firestore, storage } from "../firebase";
