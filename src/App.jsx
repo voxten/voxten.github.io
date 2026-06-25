@@ -1,7 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { About, Contact, Header, Navbar, Projects, StarsCanvas, Skills, CreateCollection } from "./components";
-import ProjectModal from "./components/projects/ProjectModal";
+import { LazyMotion, domAnimation } from "framer-motion";
+
+// Keep critical above-the-fold elements static for immediate paint (FCP/LCP)
+import { Navbar, Header } from "./components";
+
+const About = lazy(() => import("./components").then(m => ({ default: m.About })));
+const Skills = lazy(() => import("./components").then(m => ({ default: m.Skills })));
+const Projects = lazy(() => import("./components").then(m => ({ default: m.Projects })));
+const Contact = lazy(() => import("./components").then(m => ({ default: m.Contact })));
+const ProjectModal = lazy(() => import("./components/projects/ProjectModal"));
 
 const App = () => {
 	const [selectedProject, setSelectedProject] = useState(null);
@@ -14,37 +22,49 @@ const App = () => {
 		}
 	}, [selectedProject]);
 
+	// Use a lightweight layout fallback for sections still loading on scroll
+	const renderFallback = <div className="h-40 w-full bg-primary" />;
+
 	return (
 		<BrowserRouter>
-			<div className="bg-primary min-h-screen">
-				<Navbar />
+			<LazyMotion features={domAnimation}>
+				<div className="bg-primary min-h-screen text-white">
+					<Navbar />
+					<div className="relative z-0">
+						<Header />
+					</div>
 
-				<div className="relative z-0">
-					<Header />
-					<StarsCanvas />
+					<Suspense fallback={renderFallback}>
+						<About />
+					</Suspense>
+
+					<div className="relative z-0">
+						<Suspense fallback={renderFallback}>
+							<Skills />
+						</Suspense>
+					</div>
+
+					<div className="relative z-0">
+						<Suspense fallback={renderFallback}>
+							<Projects setSelectedProject={setSelectedProject} />
+						</Suspense>
+					</div>
+
+					<Suspense fallback={renderFallback}>
+						<Contact />
+					</Suspense>
+
+					{/* Global Modal */}
+					<Suspense fallback={null}>
+						{selectedProject && (
+							<ProjectModal
+								project={selectedProject}
+								onClose={() => setSelectedProject(null)}
+							/>
+						)}
+					</Suspense>
 				</div>
-
-				<About />
-
-				<div className="relative z-0">
-					<Skills />
-				</div>
-
-				<div className="relative z-0">
-					<Projects setSelectedProject={setSelectedProject} />
-					<StarsCanvas />
-				</div>
-
-				<Contact />
-
-				{/* Global Modal */}
-				{selectedProject && (
-					<ProjectModal
-						project={selectedProject}
-						onClose={() => setSelectedProject(null)}
-					/>
-				)}
-			</div>
+			</LazyMotion>
 		</BrowserRouter>
 	);
 };

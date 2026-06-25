@@ -5,13 +5,11 @@ import Skills from './Skills'
 import Projects from './Projects.jsx';
 import List from './List'
 import Contact from './Contact';
-import StarsCanvas from '../utils/canvas/Stars.jsx';
 import CreateCollection from './CreateCollection.jsx';
 
 export {
   Header,
   Navbar,
-  StarsCanvas,
   About,
   Skills,
   List,

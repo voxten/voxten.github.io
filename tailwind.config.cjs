@@ -18,12 +18,6 @@ module.exports = {
             screens: {
                 xs: "450px",
             },
-            backgroundImage: {
-                "header-pattern": "url('/src/assets/img/backgrounds/astronaut.webp')",
-            },
-            backgroundSize: {
-              "bg-cover": "",  
-            },
         },
     },
     plugins: [],
