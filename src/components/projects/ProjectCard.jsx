@@ -9,7 +9,8 @@ const ProjectCard = ({ project, onClick, index }) => (
         variants={fadeIn("", "", index * 0.1, 1)}
         whileHover={{ y: -6 }}
         onClick={onClick}
-        className="cursor-pointer group relative"
+        /* w-full handles mobile, sm:w-auto preserves your desktop grid */
+        className="cursor-pointer group relative w-full sm:w-auto"
     >
         <div className="absolute inset-0 bg-gradient-to-b from-indigo-500/20 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl -z-10" />
 
